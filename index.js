@@ -45,18 +45,18 @@ function retrieveVals() {
 
 function chartAll() {
     retrieveVals();
-    chart('#original', expl, resp);
-    chart('#sqr', expl, transform(resp, square));
-    chart('#sqrt', expl, transform(resp, squareRoot));
-    chart('#logy', expl, transform(resp, log10));
-    chart('#neg-inv-sqrt', expl, transform(resp, negativeInverseRoot));
-    chart('#neg-inv', expl, transform(resp, negativeInverse));
-    chart('#neg-inv-sqr', expl, transform(resp, negativeInverseSquare));
-    chart('#logx', transform(expl, log10), resp);
-    chart('#logxy', transform(expl, log10), transform(resp, log10));
+    chart('#original', 'Original', expl, resp);
+    chart('#sqr', 'Square', expl, transform(resp, square));
+    chart('#sqrt', 'Square Root', expl, transform(resp, squareRoot));
+    chart('#logy', 'Log Y', expl, transform(resp, log10));
+    chart('#neg-inv-sqrt', 'Negative Inverse Square Root', expl, transform(resp, negativeInverseRoot));
+    chart('#neg-inv', 'Negative Inverse', expl, transform(resp, negativeInverse));
+    chart('#neg-inv-sqr', 'Negative Inverse Square', expl, transform(resp, negativeInverseSquare));
+    chart('#logx', 'Log X', transform(expl, log10), resp);
+    chart('#logxy', 'Log X and Y', transform(expl, log10), transform(resp, log10));
 }
 
-function chart(div, data_x, data_y) {
+function chart(div, title, data_x, data_y) {
     var chart = c3.generate({
         bindto: div,
         data: {
@@ -69,6 +69,9 @@ function chart(div, data_x, data_y) {
                 data_y
             ],
             type: 'scatter'
+        },
+        title: {
+            text: title
         }
     });
 }
