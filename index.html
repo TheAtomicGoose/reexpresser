@@ -2,12 +2,18 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Reexpresser by TheAtomicGoose</title>
+    <title>Reexpresser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <script type="text/javascript" src="./index.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -19,6 +25,50 @@
     </section>
 
     <section class="main-content">
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Explanatory</strong></th>
+                <th><strong>Responsive</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <span><input type="button" id="addRow" value="Add Row"><input type="button" id="removeRow" value="Remove Row"></span>
+    <div id="original"></div>
+    <br>
+    <div class="pure-g" id="expressions">
+        <div class="pure-u-1-3" id="sqr"></div>
+        <div class="pure-u-1-3" id="sqrt"></div>
+        <div class="pure-u-1-3" id="logy"></div>
+        <div class="pure-u-1-3" id="neg-inv-sqrt"></div>
+        <div class="pure-u-1-3" id="neg-inv"></div>
+        <div class="pure-u-1-3" id="neg-inv-sqr"></div>
+        <div class="pure-u-1-3" id="logx"></div>
+        <div class="pure-u-1-3" id="logxy"></div>
+    </div>
       <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
