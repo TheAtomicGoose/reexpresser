@@ -11,7 +11,7 @@ $(document).ready(function() {
         $('tbody tr:last').remove();
     });
 
-    $('input:text').change(function() {
+    $('input:submit').click(function() {
         var allFilled = true;
         var allNumbers = true;
         $('input:text').each(function() {
